@@ -1,0 +1,33 @@
+% First we need to generate the logic on the transitions
+transition(q1,e,q2).
+transition(q2,s,q3).
+transition(q2,t,q5).
+transition(q3,s,q4).
+transition(q3,t,q6).
+transition(q3,g,q11).
+transition(q4,e,q16).
+transition(q5,h,q13).
+transition(q6,e,q7).
+transition(q7,l,q8).
+transition(q8,l,q9).
+transition(q9,i,q10).
+transition(q10,o,q16).
+transition(q11,a,q12).
+transition(q12,l,q16).
+transition(q13,u,q14).
+transition(q14,i,q15).
+transition(q15,l,q16).
+
+final_state(q8).
+final_state(q16).
+
+automaton(list):-
+    check_automaton(list, q1).
+
+check_automaton([], iState):-
+    final_state(iState).
+
+check_automaton([symbol | restlist], iState):-
+    transition(iState, symbol, nState),
+    check_automaton(restlist, nState).
+
