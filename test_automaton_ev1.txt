@@ -1,0 +1,30 @@
+% c:/Users/majos/OneDrive/Documentos/Prolog/automaton_ev1.pl compiled 0.00 sec, 0 clauses
+?- automaton([e,s,s,e]).
+true .
+
+?- automaton([e,t,h,u,i,l]).
+true.
+
+?- automaton([e,s,t,e,l]).
+true.
+
+?- automaton([e,t,h,u,i,l]).
+true.
+
+?- automaton([e,s,t,e,l,l,i,o]).
+true .
+
+?- automaton([e,s,g,a,l]).
+true .
+
+?- automaton([e,s,g,a,s]).
+false.
+
+?- automaton([e,s,s,g,a,l]).
+false.
+
+?- automaton([e,s,s,e,s]).
+false.
+
+?- automaton([e,s,s,e]).
+true 
