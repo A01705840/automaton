@@ -53,6 +53,9 @@ We first need to implement the logic of the automaton on Prolog. For this it is 
 | q14      | i     | q15  |
 | q15      | l     | q16  |
 
+## Tests
+![image](https://github.com/A01705840/automaton/assets/111139686/ad8aa6bf-ea1b-431c-8e1f-e9f32b4b3508)
+
 
 ## References
 Geeksforgeeks. (2023, June 27). Introduction of Finite Automata - GeeksforGeeks. Geeksforgeeks. Retrieved 24 March. 2024, from https://geeksforgeeks.org/introduction-of-finite-automata/.
