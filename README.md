@@ -23,17 +23,22 @@ After finding this patterns, I decided that the best way of implementing the aut
 
 ## Models
 ### Automaton
+#### NDA 1
 The first model was one that worked, but was not that efficient because it had many final states and none of the patterns where used: For almost every word there was a final state. The number of states being 18.
 ![Untitled (4)](https://github.com/A01705840/automaton/assets/111139686/06d6f789-5945-42b6-9bee-c64c183f61c3)
 
+#### NDA 2
 Then, to try and make it more efficient a model was made with only one final state, there fore less states in total. But this model did not work, because it became a NFA because of the input of 'l' on q7. This could make the automata less efficient and complex to program. The number of states being 16.
 ![Untitled (3)](https://github.com/A01705840/automaton/assets/111139686/d4696f16-f181-434e-8b65-70e724e65ab5)
 
+#### NDA 3
 At last, the best model was the following, with two final states. This meant the number of states could be reduced to 16 and still work. This last models uses the last state from the first model for the word 'estel', but reduces the amount of final states redirecting the last possible letters 'l', 'e' or 'o' into a single final state.
 ![Untitled](https://github.com/A01705840/automaton/assets/111139686/05aa5e1e-0838-4511-a643-a1491e85545f)
 
 ### Regular Expression
-e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio')) | 'thuil')
+
+
+NDA 3 -> e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio')) | 'thuil')
 
 ## Implementation
 We first need to implement the logic of the automaton on Prolog. For this it is necessary to implement transition functions. Which means making the relations transition(qi, x, qn). In which 'qi' means the initial state, 'x' meaning the symbol and 'qn' meaning the next state.
