@@ -2,7 +2,7 @@
 Evidencia 1 para TC2037 Implementation of Computational Methods
 
 ## Descripcion
-The language it is goign to be interpreted on this automaton is composed by 5 words:
+The language it is going to be interpreted on this automaton is composed by 5 words:
 - Esgal - 'screen, hiding'.
 - Esse - Quenya word for 'Name'.
 - Estel - Sindarin word for 'Hope'.
