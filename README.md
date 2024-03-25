@@ -17,7 +17,7 @@ On this words we can find the patterns that some of them share:
 - Words 'Estel' and 'Estellio' share the same beginning 'estel'
 - Words 'Esgal', 'Estel' and 'Ethuil' all end on 'l'
 
-After finding this patterns, I decided that the best way of implementing the automaton was to make a DFA (Deterministic Finite Automaton). This means that there is a limited subset of characters available. In this case 
+After finding this patterns, I decided that the best way of implementing the automaton was to make a DFA (Deterministic Finite Automaton) (Geeksforgeeks, 2023). This means that there is a limited subset of characters available. In this case 
 
 #### Σ = {e,s,g,a,l,t,i,o,h,u}
 
@@ -66,13 +66,30 @@ We first need to implement the logic of the automaton on Prolog. For this it is 
 | q14      | i     | q15  |
 | q15      | l     | q16  |
 
-Now to determine the final states
+To determine the final state. It takes one argument, which is the final state.
+
+To make the evaluation the function 'automaton' is used and had one argument that is the list of letters in order of the word. For it to work, first is needed a function that check and iterates through the list. This first check function start on the 'q1' on the automaton function.
+
+The check_automaton function starts by checking if the list is empty, and proceedes to make a comparison between the corrected final states and the current final state of the current list. If not, then the array separates the list from the symbol and check if one of the transitions according to the 'qi' matches 'x'.
+
+On the check_automaton function recursion is used, so the next symbol is iterated and checked from the transitions and so on.
+
+Once it finalizes or the rest of the list is empty, it proceed to make the final state comparison.
 
 ## Tests
 ![image](https://github.com/A01705840/automaton/assets/111139686/ad8aa6bf-ea1b-431c-8e1f-e9f32b4b3508)
 
+## Analysis
+The complexity of this model is O(n). This is because on the function check_automaton we can find that it calls itself one time, reducing the number of elements of the list by one, which means the complexity is O(n-1). So by being reduced by the amount of letters on the words, the complexity depends on the input n.
 
-
+My first idea, was to make the regular expression and make the grammar to help me code in prolog, which I was using based on Warren (1999), after some failed attempts, I decided to make the automaton and use the recursion in Prolog documented in Epita (n.d.) and to understand lists iteration and testing from Treasure-Jones (1996).
 ## References
+Epita. (n.d.). An introduction to Prolog!. Boklm. Retrieved 24 March. 2024, from https://boklm.eu/prolog/page_6.html#61.
+
 Geeksforgeeks. (2023, June 27). Introduction of Finite Automata - GeeksforGeeks. Geeksforgeeks. Retrieved 24 March. 2024, from https://geeksforgeeks.org/introduction-of-finite-automata/.
+
+Treasure-Jones, T. (1996, October 8). Prolog Tutorial - Lists. Doc. Retrieved 24 March. 2024, from https://doc.gold.ac.uk/~mas02gw/prolog_tutorial/prologpages/lists.html.
+
+Warren, D. (1999, July 31). Grammars in Prolog. Stonybrook. Retrieved 24 March. 2024, from https://www3.cs.stonybrook.edu/~warren/xsbbook/node10.html.
+
 
