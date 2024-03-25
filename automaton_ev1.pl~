@@ -21,13 +21,13 @@ transition(q15,l,q16).
 final_state(q8).
 final_state(q16).
 
-automaton(list):-
-    check_automaton(list, q1).
+automaton(List):-
+    check_automaton(List, q1).
 
-check_automaton([], iState):-
-    final_state(iState).
+check_automaton([], IState):-
+    final_state(IState).
 
-check_automaton([symbol | restlist], iState):-
-    transition(iState, symbol, nState),
-    check_automaton(restlist, nState).
+check_automaton([Symbol | Restlist], IState):-
+    transition(IState, Symbol, NState),
+    check_automaton(Restlist, NState).
 
