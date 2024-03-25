@@ -66,7 +66,7 @@ We first need to implement the logic of the automaton on Prolog. For this it is 
 | q14      | i     | q15  |
 | q15      | l     | q16  |
 
-To determine the final state. It takes one argument, which is the final state.
+To determine the final state. It takes one argument, which is the final state of the input made.
 
 To make the evaluation the function 'automaton' is used and had one argument that is the list of letters in order of the word. For it to work, first is needed a function that check and iterates through the list. This first check function start on the 'q1' on the automaton function.
 
