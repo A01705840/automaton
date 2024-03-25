@@ -24,7 +24,7 @@ After finding this patterns, I decided that the best way of implementing the aut
 ## Models
 ### Automaton
 The first model was one that worked, but was not that efficient because it had many final states and none of the patterns where used: For almost every word there was a final state. The number of states being 18.
-![Untitled (1)](https://github.com/A01705840/automaton/assets/111139686/69347276-df1e-42b9-a42e-5f6091598269)
+![Untitled (4)](https://github.com/A01705840/automaton/assets/111139686/06d6f789-5945-42b6-9bee-c64c183f61c3)
 
 Then, to try and make it more efficient a model was made with only one final state, there fore less states in total. But this model did not work, because it became a NFA because of the input of 'l' on q7. This could make the automata less efficient and complex to program. The number of states being 16.
 ![Untitled (3)](https://github.com/A01705840/automaton/assets/111139686/d4696f16-f181-434e-8b65-70e724e65ab5)
