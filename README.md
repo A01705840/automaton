@@ -28,3 +28,32 @@ After finding this patterns, I decided that the best way of implementing the aut
 ### Regular Expression
 e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio')) | 'thuil')
 
+## Implementation
+We first need to implement the logic of the automaton on Prolog. For this it is necessary to implement transition functions. Which means making the relations transition(qi, x, qn). In which 'qi' means the initial state, 'x' meaning the symbol and 'qn' meaning the next state.
+
+### Table of Transitions.
+| From     | Input | To   |
+|----------|-------|------|
+| q1       | e     | q2   |
+| q2       | s     | q3   |
+| q2       | t     | q5   |
+| q3       | s     | q4   |
+| q3       | t     | q6   |
+| q3       | g     | q11  |
+| q4       | e     | q16  |
+| q5       | h     | q13  |
+| q6       | e     | q7   |
+| q7       | l     | q8   |
+| q8       | l     | q9   |
+| q9       | i     | q10  |
+| q10      | o     | q16  |
+| q11      | a     | q12  |
+| q12      | l     | q16  |
+| q13      | u     | q14  |
+| q14      | i     | q15  |
+| q15      | l     | q16  |
+
+
+## References
+Geeksforgeeks. (2023, June 27). Introduction of Finite Automata - GeeksforGeeks. Geeksforgeeks. Retrieved 24 March. 2024, from https://geeksforgeeks.org/introduction-of-finite-automata/.
+
