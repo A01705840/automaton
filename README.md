@@ -37,9 +37,9 @@ At last, the best model was the following, with two final states. This meant the
 
 ### Regular Expression
 
-NDA 1 -> e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio' ) ) | 'thuil' ) /n
-NDA 2 -> e( s ( 'gal' | 'se' | 'tel' | 'tellio' ) | 'thuil' )
-NDA 3 -> e( s ( ( 'ga' | 'te' ) 'l' | 'se' | 'tellio' ) | 'thuil' )
+- *NDA 1 ->* e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio' ) ) | 'thuil' )
+- *NDA 2 ->* e( s ( 'gal' | 'se' | 'tel' | 'tellio' ) | 'thuil' )
+- *NDA 3 ->* e( s ( ( 'ga' | 'te' ) 'l' | 'se' | 'tellio' ) | 'thuil' )
 
 ## Implementation
 We first need to implement the logic of the automaton on Prolog. For this it is necessary to implement transition functions. Which means making the relations transition(qi, x, qn). In which 'qi' means the initial state, 'x' meaning the symbol and 'qn' meaning the next state.
@@ -70,6 +70,7 @@ Now to determine the final states
 
 ## Tests
 ![image](https://github.com/A01705840/automaton/assets/111139686/ad8aa6bf-ea1b-431c-8e1f-e9f32b4b3508)
+
 
 
 ## References
