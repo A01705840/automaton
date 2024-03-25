@@ -37,8 +37,7 @@ At last, the best model was the following, with two final states. This meant the
 
 ### Regular Expression
 
-
-NDA 1 -> e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio' ) ) | 'thuil' )
+NDA 1 -> e( s ( 'gal' | 'se' | 'te' ( 'l' | 'llio' ) ) | 'thuil' ) \n
 NDA 2 -> e( s ( 'gal' | 'se' | 'tel' | 'tellio' ) | 'thuil' )
 NDA 3 -> e( s ( ( 'ga' | 'te' ) 'l' | 'se' | 'tellio' ) | 'thuil' )
 
