@@ -80,7 +80,7 @@ Once it finalizes or the rest of the list is empty, it proceed to make the final
 ![image](https://github.com/A01705840/automaton/assets/111139686/ad8aa6bf-ea1b-431c-8e1f-e9f32b4b3508)
 
 ## Analysis
-The complexity of this model is O(n). This is because on the function check_automaton we can find that it calls itself one time, reducing the number of elements of the list by one, which means the complexity is O(n-1). So by being reduced by the amount of letters on the words, the complexity depends on the input n.
+The complexity of this model is O(n). This is because it all depends on the input length in order to be analized.
 
 My first idea, was to make the regular expression and make the grammar to help me code in prolog, which I was using based on Warren (1999), after some failed attempts, I decided to make the automaton and use the recursion in Prolog documented in Epita (n.d.) and to understand lists iteration and testing from Treasure-Jones (1996).
 ## References
